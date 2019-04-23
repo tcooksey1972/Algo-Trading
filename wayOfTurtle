@@ -1,4 +1,4 @@
-//@version=2
+//@version=3
 //coded by tcooksey1972
 //original idea from «Way of the Turtle: The Secret Methods that Turned Ordinary People into Legendary Traders» (2007) CURTIS FAITH
 strategy("modified 20 years old Turtles strategy. by tcooksey1972", shorttitle = "Turtles", overlay=true, pyramiding=5, default_qty_type= strategy.cash, default_qty_value = 1000)
