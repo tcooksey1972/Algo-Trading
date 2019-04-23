@@ -1,0 +1,10 @@
+//@version=3
+strategy("MA_strategy" , shorttitle="MA_strategy", overlay=true, initial_capital=100000)
+SMA =input(10, minval=1)
+s=sma(close,SMA)
+plot(s, color=yellow,linewidth=2) // Plots the MA
+buy= close>s
+sell= close<s
+ordersize=floor(strategy.equity/close) // To dynamically calculate the order size as the account equity increases or decreases.
+strategy.entry("long",strategy.long,ordersize,when=buy)
+strategy.close("long", when = sell )
